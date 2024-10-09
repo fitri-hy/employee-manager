@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Okt 2024 pada 10.19
+-- Waktu pembuatan: 09 Okt 2024 pada 12.32
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -41,7 +41,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `created_at`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2a$10$P8TY27S1SAmuHM8/YL4W7OC7/ydkhiZDQ4jOguKNM4Dv/J2bMKtTe', 'admin', '2024-10-09 07:38:16');
+(1, 'admin', 'admin@gmail.com', '$2a$10$P8TY27S1SAmuHM8/YL4W7OC7/ydkhiZDQ4jOguKNM4Dv/J2bMKtTe', 'admin', '2024-10-09 07:38:16'),
+(2, 'manager', 'manager@gmail.com', '$2a$10$wdsrAmbdIfakbS6XK7owNuxK/q6jQc9p5GNzln6mnoP/o0L/OlZ82', 'manager', '2024-10-09 10:27:21'),
+(3, 'employee', 'employee@gmail.com', '$2a$10$2lMjEGwy6rI.t4/SxJi/hevYe1DucKQmzh83KrRQDXpYWZkSHtd1y', 'employee', '2024-10-09 10:28:29');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +63,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

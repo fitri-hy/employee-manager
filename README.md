@@ -66,5 +66,13 @@ Aplikasi web pengelolaan karyawan (**Employee Manager**) adalah solusi komprehen
 - MySQL
 - Tailwind
 
+## Account Demo
+
+| Role      | Email               | Password            |
+|-----------|---------------------|---------------------|
+|Super Admin| admin@gmail.com     | admin               |
+|Manager    | manager@gmail.com   | manager             |
+|Employees  | employee@gmail.com  | employee            |
+
 
  

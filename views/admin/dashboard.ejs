@@ -1,2 +1,32 @@
-<h1>Admin Dashboard</h1>
-<p>Welcome, <%= user.username %>!</p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <%- include('partials/head') %>
+    <style>
+        .aside {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="flex bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200">
+		<%- include('components/aside') %>
+
+		<section class="flex-1 min-h-screen ml-0 md:ml-64 transition-all md:transition-none duration-300">
+			<%- include('components/header') %>
+			<div class="p-4">
+				
+				<div class="bg-white dark:bg-slate-800 rounded-lg shadow p-4">
+				
+					<p>Welcome, <%= user.username %>!</p>
+					<h1 class="text-2xl font-semibold mt-2">Selamat Datang di Dashboard Admin</h1>
+					
+				</div>
+			</div>
+		</section>
+	<main>
+    
+    <%- include('partials/script') %>
+</body>
+</html>
