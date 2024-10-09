@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('etc/partials/head') %>
+</head>
+<body>
+    <img class="-z-10 h-screen w-full fixed top-0 object-cover" src="/assets/img/home-bg.jpg" alt="background <%= site_title %>">
+    
+    <main class="min-h-screen w-full bg-white/80 backdrop-blur-sm dark:bg-gray-800/90 flex flex-col justify-center items-center p-4">
+        <div class="flex flex-col items-center justify-center gap-2 text-gray-700 dark:text-gray-200 bg-white/90 p-6 rounded-xl border border-gray-200 shadow-lg dark:bg-gray-800/90 dark:border-gray-700 w-full max-w-xl">
+			<div class="w-full flex justify-between">
+				<a href="/" class="hover:scale-105 text-rose-500">
+					<i class="fa-solid fa-arrow-left text-2xl"></i>
+				</a>
+				<button id="dark-mode-toggle" class="hover:scale-105">
+					<i id="dark-mode-icon" class="text-amber-500 fas fa-sun transition-colors duration-300 text-2xl"></i>
+				</button>
+			</div>
+			
+			<header class="flex flex-col gap-2">
+				<img class="h-36 w-36 m-auto obeject-cover" src="/assets/img/login.png" alt="Employees Manager">
+				<h1 class="text-3xl font-bold text-center">
+					Login Account
+				</h1>
+				<p class="text-center text-gray-600 dark:text-gray-300 max-w-sm m-auto">
+					Log in to your Employees Manager account to access employee management tools.
+				</p>
+			</header>
+			
+			<div class="w-full max-w-sm mt-9 mb-4">
+				<form action="/login" method="POST" class="flex flex-col gap-4">
+					<div class="flex flex-col gap-1">
+						<label>Email</label>
+						<input type="email" name="email" placeholder="jhon@gmail.com" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none">
+					</div>
+					<div class="flex flex-col gap-1">
+						<label>Password</label>
+						<input type="password" name="password" placeholder="********" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none">
+					</div>
+					<div class="flex gap-4 mt-4 justify-between items-center">
+						<button type="submit" class="px-4 py-2 rounded bg-blue-600 hover:bg-blue-500 text-white">
+							Login
+						</button>
+						<span class="text-sm">
+							Don't have an account yet?
+							<a href="/register" class="hover:underline text-blue-600 dark:text-blue-500 font-semibold">
+								REGISTER
+							</a>
+						</span>
+					</div>
+				</form>
+			</div>
+        </div>
+		<%- include('etc/components/footer') %>
+    </main>
+    <%- include('etc/partials/script') %>
+</body>
+</html>
