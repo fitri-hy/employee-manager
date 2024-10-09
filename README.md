@@ -1,3 +1,5 @@
+<img src="./public/ss.png">
+
 #  Aplikasi Web Employee Manager
 
 Aplikasi web pengelolaan karyawan (**Employee Manager**) adalah solusi komprehensif yang dirancang untuk membantu organisasi dalam mengelola sumber daya manusia dengan lebih efisien. Dengan antarmuka yang intuitif dan fitur yang lengkap, aplikasi ini memungkinkan pengelolaan data karyawan, absensi, gaji, dan kinerja dalam satu platform yang terintegrasi.
