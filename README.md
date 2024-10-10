@@ -1,8 +1,8 @@
 <img src="./public/ss.png">
 
-#  Aplikasi Web Employee Manager
+#  Aplikasi Web E-Manager
 
-Aplikasi web pengelolaan karyawan (**Employee Manager**) adalah solusi komprehensif yang dirancang untuk membantu organisasi dalam mengelola sumber daya manusia dengan lebih efisien. Dengan antarmuka yang intuitif dan fitur yang lengkap, aplikasi ini memungkinkan pengelolaan data karyawan, absensi, gaji, dan kinerja dalam satu platform yang terintegrasi.
+Aplikasi web pengelolaan karyawan (**E-Manager**) dirancang untuk membantu perusahaan dalam mengelola data karyawan secara efisien. Aplikasi ini menyediakan berbagai fitur untuk mempermudah administrasi karyawan, meningkatkan produktivitas, dan memfasilitasi komunikasi antara manajemen dan karyawan.
 
 ## Fitur Utama
 
@@ -13,12 +13,12 @@ Aplikasi web pengelolaan karyawan (**Employee Manager**) adalah solusi komprehen
 - Manajer seperti Mengelola kinerja dan absensi karyawan di bawah divisi tertentu dan menyetujui permohonan cuti.
 - Karyawan seperti Mengakses data pribadi seperti slip gaji, mengajukan permohonan cuti absensi dll.
 
-**2. Manajemen Karyawan** (status: ❌)
+**2. Manajemen Pengguna** (status: ❌)
 
-- Penyimpanan Data Karyawan seperti Informasi dasar seperti nama, alamat, kontak, jabatan, dan riwayat pekerjaan.
-- Dokumen Karyawan seperti Upload dan pengelolaan dokumen penting seperti KTP, NPWP, dan dokumen lainnya.
-- Penambahan, pengeditan, dan penghapusan data karyawan.
-- Pencarian dan filter untuk menemukan karyawan berdasarkan nama, jabatan, atau departemen.
+- Penyimpanan Data Pengguna seperti Informasi dasar seperti nama, alamat, kontak, jabatan, dan riwayat pekerjaan.
+- Dokumen Pengguna seperti Upload dan pengelolaan dokumen penting seperti KTP, NPWP, dan dokumen lainnya.
+- Penambahan, pengeditan, dan penghapusan data Pengguna.
+- Pencarian dan filter untuk menemukan Pengguna berdasarkan nama, jabatan, atau departemen.
 
 **3. Pengelolaan Absensi** (status: ❌)
 
