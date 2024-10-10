@@ -71,16 +71,4 @@ Aplikasi web pengelolaan karyawan (**E-Manager**) dirancang untuk membantu perus
 |Manager    | manager@gmail.com   | manager             |
 |Employees  | employee@gmail.com  | employee            |
 
-## Update
-
-| Kemajuan Terakhir                    | Status  |
-| ------------------------------------ | ------- |
-| Landing Page                         |✔       |
-| 500 Page                             |✔       |
-| 404 Page                             |✔       |
-| 403 Page                             |✔       |
-| Login & Register Page & BE           |✔       |
-| Multi Role Page & BE                 |✔       |
-| Admin Profile & BE                   |🕒       |
-| Akan Tersedia Lainnya ...            |⏳       |
- 
+Belom Jadi Bro ..
