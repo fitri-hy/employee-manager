@@ -20,4 +20,24 @@ router.get('/admin/dashboard', ensureAuthenticated, ensureRole('admin'), dashboa
 router.get('/employee/dashboard', ensureAuthenticated, ensureRole('employee'), dashboardController.employeeDashboard);
 router.get('/manager/dashboard', ensureAuthenticated, ensureRole('manager'), dashboardController.managerDashboard);
 
+// Error page
+router.use((req, res) => {
+  res.status(404).render('404', { 
+    site_title: 'Page Not Found | E-Manager',
+    site_description: 'The page you are looking for does not exist.',
+    site_keywords: '404, page not found',
+    author: 'I-As.Dev'
+  });
+});
+
+router.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).render('500', {
+    site_title: 'Internal Server Error | Employees Manager',
+    site_description: 'Something went wrong on our end.',
+    site_keywords: 'internal server error',
+    author: 'I-As.Dev'
+  });
+});
+
 module.exports = router;

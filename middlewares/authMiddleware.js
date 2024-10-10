@@ -11,7 +11,12 @@ const ensureRole = (role) => {
     if (req.session.user && req.session.user.role === role) {
       return next();
     } else {
-      res.status(403).send('Access Denied');
+      res.status(403).render('403', { 
+		site_title: 'Access Denied | E-Manager',
+		site_description: 'You do not have permission to access this resource.',
+		site_keywords: 'access denied',
+		author: 'I-As.Dev'
+	  });
     }
   };
 };

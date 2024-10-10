@@ -4,8 +4,8 @@ const db = require('../config/db');
 exports.getLoginPage = (req, res) => {
 	res.render('login', { 
 		message: req.flash('error_msg'),
-		site_title: 'Login | Employees Manager',
-		site_description: 'Log in to your Employees Manager account to access employee management tools.',
+		site_title: 'Login | E-Manager',
+		site_description: 'Log in to your E-Manager account to access employee management tools.',
 		site_keywords: 'login, employee management, HR tools',
 		author: 'I-As.Dev'
 	});
@@ -43,8 +43,8 @@ exports.postLogin = (req, res, next) => {
 
 exports.getRegisterPage = (req, res) => {
   res.render('register', {
-		site_title: 'Register | Employees Manager',
-		site_description: 'Create an account to manage your employees efficiently with Employees Manager.',
+		site_title: 'Register | E-Manager',
+		site_description: 'Create an account to manage your employees efficiently with E-Manager.',
 		site_keywords: 'registration, employee management, HR tools',
 		author: 'I-As.Dev'
 	});

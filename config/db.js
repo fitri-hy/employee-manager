@@ -1,11 +1,11 @@
 const mysql = require('mysql2');
-require('dotenv').config();  // Load .env file
+require('dotenv').config();
 
 const connection = mysql.createConnection({
-  host: process.env.DB_HOST,       // Ambil dari .env
-  user: process.env.DB_USER,       // Ambil dari .env
-  password: process.env.DB_PASS,   // Ambil dari .env
-  database: process.env.DB_NAME    // Ambil dari .env
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 });
 
 connection.connect((err) => {
