@@ -80,7 +80,7 @@ Aplikasi web pengelolaan karyawan (**E-Manager**) dirancang untuk membantu perus
 | 404 Page                             |✔       |
 | 403 Page                             |✔       |
 | Login & Register Page & BE           |✔       |
-| Admin, Manager, Employee Page & BE   |✔       |
+| Multi Role Page & BE                 |✔       |
 | Admin Profile & BE                   |🕒       |
 | Akan Tersedia Lainnya ...            |⏳       |
  
