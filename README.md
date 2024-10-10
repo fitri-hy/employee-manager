@@ -7,56 +7,53 @@ Aplikasi web pengelolaan karyawan (**E-Manager**) dirancang untuk membantu perus
 ## Fitur Utama
 
 
-**1. Multi Role User** (status: ✔)
+**1. Multi Role User**
 
 - Administrator seperti Mengelola seluruh data karyawan dan mengatur hak akses untuk pengguna lain.
 - Manajer seperti Mengelola kinerja dan absensi karyawan di bawah divisi tertentu dan menyetujui permohonan cuti.
 - Karyawan seperti Mengakses data pribadi seperti slip gaji, mengajukan permohonan cuti absensi dll.
 
-**2. Manajemen Pengguna** (status: ❌)
+**2. Manajemen Pengguna**
 
 - Penyimpanan Data Pengguna seperti Informasi dasar seperti nama, alamat, kontak, jabatan, dan riwayat pekerjaan.
 - Dokumen Pengguna seperti Upload dan pengelolaan dokumen penting seperti KTP, NPWP, dan dokumen lainnya.
 - Penambahan, pengeditan, dan penghapusan data Pengguna.
 - Pencarian dan filter untuk menemukan Pengguna berdasarkan nama, jabatan, atau departemen.
 
-**3. Pengelolaan Absensi** (status: ❌)
+**3. Pengelolaan Absensi**
 
 - Pencatatan kehadiran harian.
 - Pengajuan dan persetujuan cuti.
 - Laporan kehadiran karyawan.
 
-**4. Penggajian** (status: ❌)
+**4. Penggajian**
 
 - Perhitungan Gaji seperti Menghitung gaji berdasarkan jam kerja, lembur, dan potongan yang berlaku.
 - Slip Gaji Digital seperti Penyediaan slip gaji secara digital untuk karyawan.
 
-**5. Komunikasi Internal** (status: ❌)
+**5. Komunikasi Internal**
 
 - Forum Diskusi seperti Tempat bagi karyawan untuk berdiskusi dan berbagi informasi.
 - Pengumuman seperti Fitur untuk menyampaikan pengumuman penting dari manajemen.
 
-**6. Penilaian Kinerja** (status: ❌)
+**6. Penilaian Kinerja**
 
 - Penetapan dan pengukuran KPI (Key Performance Indicators) untuk karyawan.
 - Penilaian kinerja secara berkala.
 
-**7. Manajemen Proyek** (status: ❌)
+**7. Manajemen Proyek**
 
 - Pengelolaan Tugas seperti Fitur untuk membuat, menugaskan, dan memantau tugas dalam proyek.
 - Waktu Penyelesaian seperti Mengelola status penyelesaian setiap tugas proyek.
 
-**8. Laporan dan Analisis** (status: ❌)
+**8. Laporan dan Analisis**
 
 - Laporan Kehadiran seperti Laporan terkait kehadiran dan ketidakhadiran karyawan.
 - Laporan Kinerja seperti Analisis kinerja karyawan berdasarkan umpan balik dan penilaian.
 
-**9. Manajemen Jabatan dan Departemen**  (status: ❌)
+**9. Manajemen Jabatan dan Departemen**
 
 - Pengelolaan struktur organisasi, termasuk jabatan dan departemen.
-
-| ✔  : Terselesaikan | ❌ : Belum Terselesaikan  |
-| ------------------- | ------------------- |
 
 ## Tech Stack
 
@@ -74,5 +71,16 @@ Aplikasi web pengelolaan karyawan (**E-Manager**) dirancang untuk membantu perus
 |Manager    | manager@gmail.com   | manager             |
 |Employees  | employee@gmail.com  | employee            |
 
+## Update
 
+| Kemajuan Terakhir                    | Status  |
+| ------------------------------------ | ------- |
+| Landing Page                         |✔       |
+| 500 Page                             |✔       |
+| 404 Page                             |✔       |
+| 403 Page                             |✔       |
+| Login & Register Page & BE           |✔       |
+| Admin, Manager, Employee Page & BE   |✔       |
+| Admin Profile & BE                   |🕒       |
+| Akan Tersedia Lainnya ...            |⏳       |
  
