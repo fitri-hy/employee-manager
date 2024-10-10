@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Okt 2024 pada 05.09
+-- Waktu pembuatan: 10 Okt 2024 pada 10.33
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.1.12
 
@@ -48,7 +48,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `created_at`, `picture`, `full_name`, `phone`, `date_of_birth`, `address`, `nik`, `marital_status`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2a$10$P8TY27S1SAmuHM8/YL4W7OC7/ydkhiZDQ4jOguKNM4Dv/J2bMKtTe', 'admin', '2024-10-09 07:38:16', 'avatar.jpg', 'Fitri Hy', '081234567890', 'Tangerang, 01-01-2000', 'Jl. Merdeka No.100, Bintaro Sektor 9, Tangerang Selatan, Banten, 15229', '600085552211774', 'Belum Kawin'),
+(1, 'admin', 'admin@gmail.com', '$2a$10$1AyAY4hfLVOu7Tj2zpwYf.VEmliYKtAqGdKaqlWWwi6lauuz4O7hq', 'admin', '2024-10-09 07:38:16', '1728549058658-763628943.jpg', 'Fitri Hy sasa', '081234567890', 'Tangerang, 01-01-2000', 'Jl. Merdeka No.100, Bintaro Sektor 9, Tangerang Selatan, Banten, 15229', '1655522100005234', 'Belum Kawin'),
 (2, 'manager', 'manager@gmail.com', '$2a$10$wdsrAmbdIfakbS6XK7owNuxK/q6jQc9p5GNzln6mnoP/o0L/OlZ82', 'manager', '2024-10-09 10:27:21', '', '', '', '', '', '', ''),
 (3, 'employee', 'employee@gmail.com', '$2a$10$2lMjEGwy6rI.t4/SxJi/hevYe1DucKQmzh83KrRQDXpYWZkSHtd1y', 'employee', '2024-10-09 10:28:29', '', '', '', '', '', '', '');
 

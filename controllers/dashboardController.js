@@ -9,16 +9,17 @@ exports.adminDashboard = (req, res) => {
 		});
 	});
 };
+
 exports.adminProfileDashboard = (req, res) => {
 	const userId = req.session?.user?.id;
 	db.query('SELECT * FROM users WHERE id = ?', [userId], (err, result) => {
 		res.render('admin/profile', {
 			site_title: 'Profile | E-Manager',
-			user: result[0]
+			user: result[0],
+			error: null 
 		});
 	});
 };
-
 
 exports.employeeDashboard = (req, res) => {
   res.render('employee/dashboard', { 

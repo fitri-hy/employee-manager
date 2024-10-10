@@ -1,6 +1,3 @@
-const bcrypt = require('bcryptjs');
-const db = require('../config/db');
-
 exports.getHomePage = (req, res) => {
 	res.render('home', {
 		site_title: 'Home | E-Manager',
