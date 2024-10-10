@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <%- include('partials/head') %>
+</head>
+
+<body>
+    <main class="flex bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200">
+		<%- include('components/aside') %>
+
+		<section class="flex-1 min-h-screen ml-0 md:ml-64 transition-all md:transition-none duration-300">
+			<%- include('components/header') %>
+			<div class="p-4">
+				
+				<div class="bg-white dark:bg-slate-800 rounded-lg shadow p-6">
+					
+					<div class="relative flex gap-4">
+						<img src="/assets/img/banner.jpg" alt="banner" class="rounded w-full h-[300px]">
+						<div class="absolute h-full w-full bg-gray-900/20 flex items-end">
+							<div class="flex items-center gap-4 pl-9 pb-6">
+								<div class="relative bg-white rounded-full">
+									<img class="h-[80px] w-[80px] object-cover rounded-full" src="/assets/img/users/<%= user.picture %>" alt="<%= user.picture %>">
+									<form action="#" method="POST" enctype="multipart/form-data" id="uploadForm" class="absolute -bottom-1 -right-1">
+										<input type="file" name="picture" accept="image/*" class="hidden" id="fileInput" onchange="document.getElementById('uploadForm').submit();" required >
+										<button type="button" onclick="document.getElementById('fileInput').click();" class="text-white flex items-center justify-center h-7 w-7 p-1 rounded-full bg-amber-500 hover:bg-amber-400 hover:scale-105">
+											<i class="fa-solid fa-upload"></i>
+										</button>
+									</form>
+								</div>
+								<div class="flex flex-col justify-bottom text-white">
+									<h1 class="text-2xl font-bold">
+										<%= user.full_name %> <span class="text-sm">(<%= user.role %>)</span>
+									</h1>
+									<span>@<%= user.username %></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<form action="#" method="POST" class="mt-12">
+						<h2 class="text-bold font-bold text-xl">
+							Profile Details
+						</h2>
+						<div class="grid grid-cols-1 md:grid-cols-2 mt-4 gap-4 md:gap-6">
+							
+							<div class="flex flex-col gap-1">
+								<label>Username <span class="text-rose-500">*</span></label>
+								<input type="text" name="username" value="<%= user.username %>" class="p-2 rounded bg-gray-100 border border-gray-200 dark:bg-slate-700 dark:border-slate-700 focus:outline-none" readonly required >
+							</div>
+							<div class="flex flex-col gap-1">
+								<label>Email <span class="text-rose-500">*</span></label>
+								<input type="email" name="email" value="<%= user.email %>" class="p-2 rounded bg-gray-100 border border-gray-200 dark:bg-slate-700 dark:border-slate-700 focus:outline-none" readonly required >
+							</div>
+							
+							<div class="flex flex-col gap-1">
+								<label>Full Name <span class="text-rose-500">*</span></label>
+								<input type="text" name="full_name" value="<%= user.full_name %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
+							<div class="flex flex-col gap-1">
+								<label>NIK <span class="text-rose-500">*</span></label>
+								<input type="number" name="nik" value="<%= user.nik %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
+							
+							<div class="flex flex-col gap-1">
+								<label>Phone <span class="text-rose-500">*</span></label>
+								<input type="number" name="phone" value="<%= user.phone %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
+							<div class="flex flex-col gap-1">
+								<label>Date Of Birth  <span class="text-rose-500">*</span></label>
+								<input type="text" name="date_of_birth" value="<%= user.date_of_birth %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
+							
+							<div class="flex flex-col gap-1">
+								<label>Marital Status  <span class="text-rose-500">*</span></label>
+								<input type="text" name="marital_status" value="<%= user.marital_status %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
+							<div class="flex flex-col gap-1">
+								<label>Created At  <span class="text-rose-500">*</span></label>
+								<input type="text" name="created_at" id="createdAt" class="p-2 rounded bg-gray-100 border border-gray-200 dark:bg-slate-700 dark:border-slate-700 focus:outline-none" readonly required >
+							</div>
+							
+						</div>
+						
+						<div class="flex flex-col gap-1 mt-4 md:mt-6">
+							<label>Address  <span class="text-rose-500">*</span></label>
+							<textarea name="address" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" rows="4" required ><%= user.address %></textarea>
+						</div>
+						<div class="flex mt-4 md:mt-6">
+							<button type="submit" class="flex items-center gap-2 py-2 px-4 rounded bg-blue-600 hover:bg-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700 text-white">
+								<i class="fa-solid fa-floppy-disk text-lg"></i> Save Data
+							</button>
+						</div>
+						
+					</form>
+					
+					<form action="#" method="POST" class="mt-12">
+						<h2 class="text-bold font-bold text-xl">
+							Change Password
+						</h2>
+						<div class="grid grid-cols-1 md:grid-cols-2 mt-4 gap-4 md:gap-6">
+							<div class="flex flex-col gap-1">
+								<label>New Password <span class="text-rose-500">*</span></label>
+								<input type="text" name="username" placeholder="**********" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" readonly required >
+							</div>
+							<div class="flex flex-col gap-1">
+								<label>Confirm Password <span class="text-rose-500">*</span></label>
+								<input type="text" name="username" placeholder="**********" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" readonly required >
+							</div>
+						</div>
+						<div class="flex mt-4 md:mt-6">
+							<button type="submit" class="flex items-center gap-2 py-2 px-4 rounded bg-blue-600 hover:bg-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700 text-white">
+								<i class="fa-solid fa-floppy-disk text-lg"></i> Save New Password
+							</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</section>
+	<main>
+    
+    <%- include('partials/script') %>
+	<script>
+		const createdAtValue = "<%= user.created_at %>";
+		const date = new Date(createdAtValue);
+		const options = { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+		const formattedDate = date.toLocaleString('en-US', options).replace(',', '');
+		document.getElementById('createdAt').value = formattedDate;
+	</script>
+</body>
+</html>

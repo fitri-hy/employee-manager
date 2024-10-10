@@ -15,10 +15,15 @@ router.get('/register', authController.getRegisterPage);
 router.post('/register', authController.postRegister);
 router.get('/logout', authController.logout);
 
-// Dashboard Routes
+// Admin Routes
 router.get('/admin/dashboard', ensureAuthenticated, ensureRole('admin'), dashboardController.adminDashboard);
-router.get('/employee/dashboard', ensureAuthenticated, ensureRole('employee'), dashboardController.employeeDashboard);
+router.get('/admin/profile', ensureAuthenticated, ensureRole('admin'), dashboardController.adminProfileDashboard);
+
+// Manager Routes
 router.get('/manager/dashboard', ensureAuthenticated, ensureRole('manager'), dashboardController.managerDashboard);
+
+// Employee Routes
+router.get('/employee/dashboard', ensureAuthenticated, ensureRole('employee'), dashboardController.employeeDashboard);
 
 // Error page
 router.use((req, res) => {
