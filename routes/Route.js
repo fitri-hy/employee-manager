@@ -24,5 +24,6 @@ router.get('/manager/dashboard', ensureAuthenticated, ensureRole('manager'), das
 
 // Employee Routes
 router.get('/employee/dashboard', ensureAuthenticated, ensureRole('employee'), dashboardController.employeeDashboard);
+router.get('/employee/profile', ensureAuthenticated, ensureRole('employee'), dashboardController.employeeProfileDashboard);
 
 module.exports = router;

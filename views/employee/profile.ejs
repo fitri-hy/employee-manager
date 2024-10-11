@@ -20,7 +20,7 @@
 							<div class="flex items-center gap-4 pl-9 pb-6">
 								<div class="relative bg-white rounded-full">
 									<img class="h-[80px] w-[80px] object-cover rounded-full" src="/assets/img/users/<%= user.picture %>" alt="<%= user.picture %>">
-									<form action="/api/admin/profile/edit-picture" method="POST" enctype="multipart/form-data" id="uploadForm" class="absolute -bottom-1 -right-1">
+									<form action="/api/employee/profile/edit-picture" method="POST" enctype="multipart/form-data" id="uploadForm" class="absolute -bottom-1 -right-1">
 										<input type="hidden" name="id" value="<%= user.id %>">
 										<input type="file" name="picture" accept="image/*" class="hidden" id="fileInput" onchange="document.getElementById('uploadForm').submit();" required >
 										<button type="button" onclick="document.getElementById('fileInput').click();" class="text-white flex items-center justify-center h-7 w-7 p-1 rounded-full bg-amber-500 hover:bg-amber-400 hover:scale-105">
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 					
-					<form action="/api/admin/profile/edit-profile" method="POST" class="mt-12">
+					<form action="/api/employee/profile/edit-profile" method="POST" class="mt-12">
 						<input type="hidden" name="id" value="<%= user.id %>">
 						
 						<h2 class="text-bold font-bold text-xl">
@@ -59,10 +59,32 @@
 								<input type="text" name="full_name" value="<%= user.full_name %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
 							</div>
 							<div class="flex flex-col gap-1">
+								<label>NIK <span class="text-rose-500">*</span></label>
+								<input type="number" name="nik" value="<%= user.nik %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
+							
+							<div class="flex flex-col gap-1">
 								<label>Phone <span class="text-rose-500">*</span></label>
 								<input type="number" name="phone" value="<%= user.phone %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
 							</div>
+							<div class="flex flex-col gap-1">
+								<label>Date Of Birth  <span class="text-rose-500">*</span></label>
+								<input type="text" name="date_of_birth" value="<%= user.date_of_birth %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
 							
+							<div class="flex flex-col gap-1">
+								<label>NPWP  <span class="text-rose-500">*</span></label>
+								<input type="number" name="npwp" value="<%= user.npwp %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
+							<div class="flex flex-col gap-1">
+								<label>Religion  <span class="text-rose-500">*</span></label>
+								<input type="text" name="religion" value="<%= user.religion %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
+							
+							<div class="flex flex-col gap-1">
+								<label>Marital Status  <span class="text-rose-500">*</span></label>
+								<input type="text" name="marital_status" value="<%= user.marital_status %>" class="p-2 rounded bg-gray-50 border border-gray-200 dark:bg-slate-900 dark:border-slate-700 focus:outline-none" required >
+							</div>
 							<div class="flex flex-col gap-1">
 								<label>Created At  <span class="text-rose-500">*</span></label>
 								<input type="text" name="created_at" id="createdAt" class="p-2 rounded bg-gray-100 border border-gray-200 dark:bg-slate-700 dark:border-slate-700 focus:outline-none" readonly required >
@@ -82,7 +104,7 @@
 						
 					</form>
 					
-					<form action="/api/admin/profile/change-password" method="POST" class="mt-12">
+					<form action="/api/employee/profile/change-password" method="POST" class="mt-12">
 						<input type="hidden" name="id" value="<%= user.id %>">
 						
 						<h2 class="text-bold font-bold text-xl">
@@ -114,7 +136,7 @@
 		<div class="flex flex-col gap-3 bg-white dark:bg-slate-700 p-6 rounded shadow-lg w-full max-w-lg justify-center items-center">
 			<h2 class="text-lg font-bold text-red-500 text-xl">Error</h2>
 			<p id="errorMessage"></p>
-			<a href="/admin/profile" class="mt-3 px-4 py-2 rounded bg-blue-500 hiver:bg-blue-600 text-white dark:bg-blue-600 dark:hover:bg-blue-700">Close</a>
+			<a href="/employee/profile" class="mt-3 px-4 py-2 rounded bg-blue-500 hiver:bg-blue-600 text-white dark:bg-blue-600 dark:hover:bg-blue-700">Close</a>
 		</div>
 	</div>
     

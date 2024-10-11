@@ -12,11 +12,59 @@
 			<%- include('components/header') %>
 			<div class="p-4">
 				
-				<div class="bg-white dark:bg-slate-800 rounded-lg shadow p-4">
-				
-					<p>Welcome, <%= user.full_name %>!</p>
-					<h1 class="text-2xl font-semibold mt-2">Selamat Datang di Dashboard Admin</h1>
+				<div class="bg-white dark:bg-slate-800 rounded-lg shadow p-4 md:p-6">
+					<div class="flex flex-col mb-6">
+						<p>Hi, <%= user.full_name %>!</p>
+						<h1 class="text-2xl font-semibold">Welcom to E-Manager!</h1>
+					</div>
 					
+					<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+						<div class="flex flex-col gap-4 p-6 rounded-lg bg-blue-500 dark:bg-blue-600">
+							<h2 class="text-4xl font-extrabold text-white">
+								<%= totals.admin %>
+							</h2>
+							<div class="flex justify-between items-end text-gray-100">
+								<span class="font-bold">
+									Admin
+								</span>
+								<i class="fa-solid fa-user-gear text-3xl"></i>
+							</div>
+						</div>
+						<div class="flex flex-col gap-4 p-6 rounded-lg bg-amber-500 dark: bg-amber-600">
+							<h2 class="text-4xl font-extrabold text-white">
+								<%= totals.manager %>
+							</h2>
+							<div class="flex justify-between items-end text-gray-100">
+								<span class="font-bold">
+									Manager
+								</span>
+								<i class="fa-solid fa-user-tie text-3xl"></i>
+							</div>
+						</div>
+						<div class="flex flex-col gap-4 p-6 rounded-lg bg-pink-500 dark:bg-pink-600">
+							<h2 class="text-4xl font-extrabold text-white">
+								<%= totals.employee %>
+							</h2>
+							<div class="flex justify-between items-end text-gray-100">
+								<span class="font-bold">
+									Employee
+								</span>
+								<i class="fa-solid fa-user text-3xl"></i>
+							</div>
+						</div>
+						<div class="flex flex-col gap-4 p-6 rounded-lg bg-violet-500 dark:bg-violet-600">
+							<h2 class="text-4xl font-extrabold text-white">
+								<%= totals.totalAll %>
+							</h2>
+							<div class="flex justify-between items-end text-gray-100">
+								<span class="font-bold">
+									Total
+								</span>
+								<i class="fa-solid fa-users text-3xl"></i>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</section>
